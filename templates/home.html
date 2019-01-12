@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CON-FET!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body id="body">
+
+<canvas id="confetti"></canvas>
+
+<div id="container">
+    <h1><i>Con-Fet!</i></h1>
+
+
+        <h3>Shapes:</h3>
+        <label for="square">Square</label>
+        <input id ="square" type="checkbox" name="shape" value="square" checked>
+        <label for="rectangle">Rectangle</label>
+        <input id ="rectangle" type="checkbox" name="shape" value="rectangle" checked>
+        <label for="circle">Circle</label>
+        <input id ="circle" type="checkbox" name="shape" value="circle" checked>
+
+
+
+
+        <h3>Colors:</h3>
+        <input type="text" class="color" id="color1" placeholder="add color">
+        <input type="text" class="color" id="color2" placeholder="add color">
+        <input type="text" class="color" id="color3" placeholder="add color">
+        <input type="text" class="color" id="color4" placeholder="add color">
+
+        <h3>Size:</h3>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="sizeRange">
+            </div>
+
+        <h3>Speed:</h3>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="speedRange">
+            </div>
+
+        <h3>Density</h3>
+        <input type="text" id="density" value="150">
+        <label for="density">   A density greater than 250 will cause issues with lag</label>
+
+
+        <input type="submit" id="subBtn" value="Export This Con-Fet!">
+        <input type="submit" id="render" value="Render">
+
+
+
+</div>
+<script src="{{ url_for('static', filename='js/confetti.js') }}"></script>
+
+
+</body>
+
+
+</html>
